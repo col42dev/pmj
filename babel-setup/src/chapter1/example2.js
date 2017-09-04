@@ -1,9 +1,9 @@
-'use strict'
+'use strict';
 
-var goodbye = 'Goodbye!'
+var goodbye = 'Goodbye!';
 
 function hello () {
-  return goodbye
+  return goodbye;
 }
 
 if (false) {}

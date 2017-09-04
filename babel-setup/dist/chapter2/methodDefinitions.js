@@ -1,48 +1,48 @@
-'use strict'
+"use strict";
 
 var emitter = {
   events: {},
 
-  on: function on (type, fn) {
+  on: function on(type, fn) {
     if (this.events[type] === undefined) {
-      this.events[type] = []
+      this.events[type] = [];
     }
 
-    this.events[type].push(fn)
+    this.events[type].push(fn);
   },
 
-  emit: function emit (type, event) {
+  emit: function emit(type, event) {
     if (this.events[type] === undefined) {
-      return
+      return;
     }
 
     this.events[type].array.forEach(function (fn) {
-      fn(event)
-    }, this)
+      fn(event);
+    }, this);
   }
-}
+};
 
-console.log(JSON.stringify(emitter, null, 2))
+console.log(JSON.stringify(emitter, null, 2));
 
 var newEmitter = {
   events: {},
 
-  on: function on (type, fn) {
+  on: function on(type, fn) {
     if (this.events[type] === undefined) {
-      this.events[type] = []
+      this.events[type] = [];
     }
 
-    this.events[type].push(fn)
+    this.events[type].push(fn);
   },
-  emit: function emit (type, event) {
+  emit: function emit(type, event) {
     if (this.events[type] === undefined) {
-      return
+      return;
     }
 
     this.events[type].array.forEach(function (fn) {
-      fn(event)
-    }, this)
+      fn(event);
+    }, this);
   }
-}
+};
 
-console.log(JSON.stringify(newEmitter, null, 2))
+console.log(JSON.stringify(newEmitter, null, 2));

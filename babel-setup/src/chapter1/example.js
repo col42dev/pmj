@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
-var double = value => value * 2
-console.log(double(3))
+var double = value => value * 2;
+console.log(double(3));
